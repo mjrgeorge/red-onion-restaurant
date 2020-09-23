@@ -1,14 +1,38 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Cover from './components/cover/Cover';
-import Header from './components/header/Header';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './components/home/Home';
+import NotMatch from './notMatch/NotMatch';
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Cover/>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home/>
+        </Route>
+        <Route path="/:menuName">
+          <Home/>
+        </Route>
+        <Route path="/:menuName">
+          <Home/>
+        </Route>
+        <Route path="/:menuName">
+          <Home/>
+        </Route>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="*">
+          <NotMatch/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,9 +1,13 @@
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Cover from './components/cover/Cover';
+import Header from './components/header/Header';
 
 function App() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <Header/>
+      <Cover/>
     </div>
   );
 }

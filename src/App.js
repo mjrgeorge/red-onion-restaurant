@@ -6,7 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/home/Home';
-import NotMatch from './notMatch/NotMatch';
+import NotMatch from './components/notMatch/NotMatch';
 import FakeData from './fakeData/FakeData';
 import MenuDetails from './components/menuDetails/MenuDetails';
 import Login from './components/login/Login';

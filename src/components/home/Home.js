@@ -1,7 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
+import Header from '../header/Header';
+import Cover from '../cover/Cover';
 import Menu from '../menu/Menu';
 import {Nav} from 'react-bootstrap';
-import FakeData from '../../fakeData/FakeData';
 import { useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 
@@ -10,6 +11,8 @@ const Home = () => {
     const [menuItems, setMenuItems] = useContext(MenuContext);
     return (
         <div>
+            <Header/>
+            <Cover/>
             <Nav className="justify-content-center" activeKey="/time/lunch">
                 <Nav.Item>
                     <Nav.Link className="text-danger" href="/time/breakfast">Breakfast</Nav.Link>

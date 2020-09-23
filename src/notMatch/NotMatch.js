@@ -1,11 +1,14 @@
 import React from 'react';
+import { Container, Jumbotron } from 'react-bootstrap';
 
 const NotMatch = () => {
     return (
-        <div>
-            <h1>404 Error</h1>
-            <h2>Sorry; Your Page Is Not Found</h2>
-        </div>
+        <Jumbotron fluid>
+            <Container className="text-center display-1 text-danger">
+                <p>404 Error!</p>
+                <p>Sorry, Your Page Is Not Found.</p>
+            </Container>
+        </Jumbotron>
     );
 };
 

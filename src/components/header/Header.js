@@ -5,7 +5,7 @@ import logo from '../../images/logo.png'
 const Header = () => {
     return (
         <div className="row">
-            <div className="col-md-10">
+            <div className="col-md-10 pt-1 pl-5">
                 <img style={{ height:"80px"}} src={logo} alt="Logo"/>
             </div>
             <div className="col-md-2">

@@ -17,9 +17,10 @@ function App() {
 
   const [menuItems, setMenuItems] = useState(FakeData);
   const [productCount, setProductCount] = useState(1);
+  const [form, setForm] = useState(false);
 
   return (
-    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount]}>
+    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm]}>
       <Router>
         <Switch>
           <Route path="/home">

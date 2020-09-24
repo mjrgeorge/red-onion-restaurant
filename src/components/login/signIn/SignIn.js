@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { MenuContext } from '../../../App';
 import logo from '../../../images/logo.png';
 
 const SignIn = () => {
+    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm] = useContext(MenuContext);
     return (
         <div className="d-flex justify-content-center">
             <Card className="p-4 m-5" style={{width: '400px'}}>
@@ -15,7 +17,7 @@ const SignIn = () => {
                         <Form.Control type="password" name="password" placeholder="Password" required/>
                     </Form.Group>
                     <Button variant="danger" block type="submit">Sign In</Button>
-                    <Button className="text-danger" block variant="link">Create an account</Button>
+                    <Button onClick={()=>setForm(!form)} className="text-danger" block variant="link">Create an account</Button>
                 </Form>
             </Card>
         </div>

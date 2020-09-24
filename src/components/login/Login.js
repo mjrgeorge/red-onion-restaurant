@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebaseConfig";
 import SignUp from './signUp/SignUp';
 import SignIn from './signIn/SignIn';
+import { MenuContext } from '../../App';
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm] = useContext(MenuContext);
 
 const [user, setUser] = useState({
     isSignedIn: false,
@@ -69,8 +71,8 @@ e.preventDefault();
 
     return (
         <div>
-            <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>
-            <SignIn/>
+            {form===false&&<SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
+            {form===true&&<SignIn/>}
         </div>
     );
 };

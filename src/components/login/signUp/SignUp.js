@@ -9,18 +9,18 @@ const SignUp = (props) => {
     return (
         <div className="d-flex justify-content-center">
         <Card className="p-4 m-5" style={{width: '400px'}}>
-            <Card.Img className="pb-4" src={logo} alt=""/>
+            <Card.Img className="pb-4" src={logo} alt="Logo"/>
             <Form onSubmit={handleSingUp}>
-                <Form.Group controlId="formGroupEmail">
+                <Form.Group>
                     <Form.Control onBlur={handleBlur} type="text" name="name" placeholder="Name" required/>
                 </Form.Group>
-                <Form.Group controlId="formGroupEmail">
+                <Form.Group>
                     <Form.Control onBlur={handleBlur} type="email" name="email" placeholder="Email" required/>
                 </Form.Group>
-                <Form.Group controlId="formGroupPassword">
+                <Form.Group>
                     <Form.Control onBlur={handleBlur} type="password" name="password" placeholder="Password" required/>
                 </Form.Group>
-                <Form.Group controlId="formGroupPassword">
+                <Form.Group>
                     <Form.Control onBlur={handleBlur} type="password" name="confirmPassword" placeholder="Confirm Password" required/>
                 </Form.Group>
                 <Button variant="danger" block type="submit">Sign Up</Button>

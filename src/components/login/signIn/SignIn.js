@@ -9,13 +9,13 @@ const SignIn = (props) => {
     return (
         <div className="d-flex justify-content-center">
             <Card className="p-4 m-5" style={{width: '400px'}}>
-            <Card.Img className="pb-4" src={logo} alt=""/>
+            <Card.Img className="pb-4" src={logo} alt="Logo"/>
                 <Form onSubmit={handleSignIn}>
-                    <Form.Group controlId="formGroupEmail">
-                        <Form.Control onBlur={handleBlur}type="email" name="email" placeholder="Email" required/>
+                    <Form.Group>
+                        <Form.Control onBlur={handleBlur} type="email" name="email" placeholder="Email" required/>
                     </Form.Group>
-                    <Form.Group controlId="formGroupPassword">
-                        <Form.Control onBlur={handleBlur}type="password" name="password" placeholder="Password" required/>
+                    <Form.Group>
+                        <Form.Control onBlur={handleBlur} type="password" name="password" placeholder="Password" required/>
                     </Form.Group>
                     <Button variant="danger" block type="submit">Sign In</Button>
                     {user.success&&<p className="text-success text-center mt-4">User Logged Successfully</p>}

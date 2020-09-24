@@ -11,7 +11,7 @@ const MenuDetails = () => {
     const totalPrice = (productCount*price).toFixed(2);
     const history = useHistory();
     const handleProceed = () => {
-        const url = `/login`;
+        const url = `/orderPlace`;
         history.push(url);
     }
     return(

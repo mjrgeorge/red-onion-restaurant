@@ -5,11 +5,12 @@ import firebaseConfig from "./firebaseConfig";
 import SignUp from './signUp/SignUp';
 import SignIn from './signIn/SignIn';
 import { MenuContext } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm] = useContext(MenuContext);
+    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser] = useContext(MenuContext);
 
 const [user, setUser] = useState({
     isSignedIn: false,
@@ -20,6 +21,11 @@ const [user, setUser] = useState({
     error: '',
     success: false,
 });
+
+let history = useHistory();
+  let location = useLocation();
+
+  let { from } = location.state || { from: { pathname: "/" } };
 
 const handleBlur = (e) => {
 
@@ -78,6 +84,8 @@ const handleSignIn = (e)=> {
             newUserInfo.error = "";
             newUserInfo.name = response.user.displayName;
             setUser(newUserInfo);
+            setLoggedInUser(newUserInfo);
+            history.replace(from);
         })
         .catch(error=>{
             const errorMessage = error.message;

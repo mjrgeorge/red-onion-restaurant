@@ -10,6 +10,8 @@ import NotMatch from './components/notMatch/NotMatch';
 import FakeData from './fakeData/FakeData';
 import MenuDetails from './components/menuDetails/MenuDetails';
 import Login from './components/login/Login';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
+import OrderSubmit from './components/orderSubmit/OrderSubmit';
 
 export const MenuContext = createContext();
 
@@ -18,9 +20,10 @@ function App() {
   const [menuItems, setMenuItems] = useState(FakeData);
   const [productCount, setProductCount] = useState(1);
   const [form, setForm] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm]}>
+    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route path="/home">
@@ -41,6 +44,9 @@ function App() {
           <Route path="/login">
             <Login/>
           </Route>
+          <PrivateRoute path="/orderPlace">
+            <OrderSubmit/>
+          </PrivateRoute>
           <Route exact path="/">
             <Home/>
           </Route>

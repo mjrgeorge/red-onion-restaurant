@@ -53,6 +53,7 @@ if(user.password===user.confirmPassword){
             newUserInfo.success = true;
             newUserInfo.error = "";
             setUser(newUserInfo);
+            updateProfile(user.name);
         })
         .catch(error=>{
             const errorMessage = error.message;
@@ -75,6 +76,7 @@ const handleSignIn = (e)=> {
             const newUserInfo = {...user};
             newUserInfo.success = true;
             newUserInfo.error = "";
+            newUserInfo.name = response.user.displayName;
             setUser(newUserInfo);
         })
         .catch(error=>{
@@ -85,12 +87,25 @@ const handleSignIn = (e)=> {
             setUser(newUserInfo);
           });
     }
-
     e.preventDefault();
+};
+
+const updateProfile = (name)=>{
+    const user = firebase.auth().currentUser;
+    user.updateProfile({
+    displayName: name
+    })
+    .then(() =>{
+
+    })
+    .catch(error =>{
+        console.log(error);
+    });
 };
 
     return (
         <div>
+            <h1>Name: {user.name} </h1>
             {form===false && <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
             {form===true && <SignIn user={user} handleBlur={handleBlur} handleSignIn={handleSignIn}/>}
         </div>

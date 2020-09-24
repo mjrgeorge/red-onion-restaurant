@@ -2,9 +2,10 @@ import React, { useContext} from 'react';
 import Header from '../header/Header';
 import Cover from '../cover/Cover';
 import Menu from '../menu/Menu';
-import {Nav} from 'react-bootstrap';
+import {Button, Nav} from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
+import Facilities from '../facilities/Facilities';
 
 const Home = () => {
     const {menuCategory} =  useParams();
@@ -29,6 +30,10 @@ const Home = () => {
                     menuItems.filter(menuItem => menuItem.category===`${menuCategory}`).map(menus =><Menu menus={menus} key={menus.id}></Menu>)
                 }
             </div>
+                <div className="d-flex justify-content-center mb-3">
+                    <Button variant="light">Checkout You Food</Button>
+                </div>
+                <Facilities/>
         </div>
     );
 };

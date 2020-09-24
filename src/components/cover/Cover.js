@@ -4,7 +4,7 @@ import cover from '../../images/cover.png';
 
 const Cover = () => {
     return (
-        <div className="d-flex justify-content-center align-items-center" style={{ backgroundImage: `url(${cover})`, backgroundPosition: 'left top', height:"350px" }}>
+        <div className="d-flex justify-content-center align-items-center mb-4" style={{ backgroundImage: `url(${cover})`, backgroundPosition: 'left top', height:"350px" }}>
             <div>
                 <h1>Best Food Waiting Your Belly</h1>
                 <div className="d-flex justify-content-center">

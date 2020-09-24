@@ -12,6 +12,7 @@ import MenuDetails from './components/menuDetails/MenuDetails';
 import Login from './components/login/Login';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import OrderSubmit from './components/orderSubmit/OrderSubmit';
+import Contact from './components/contact/Contact';
 
 export const MenuContext = createContext();
 
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/orderPlace">
             <OrderSubmit/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
           </Route>
           {/* <PrivateRoute path="/orderPlace">
             <OrderSubmit/>

@@ -29,7 +29,26 @@ const OrderSubmit = () => {
                     </Form>
                 </Card>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">
+            <Card className="p-4 m-5" style={{width: '400px'}}>
+                <Card.Header>
+                        <h5>From Gulshan Piaza Restaurant</h5>
+                </Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                        <p><small>Arriving in 20-30 Min</small></p>
+                        <p><small>107 Rd No 8</small></p>
+                    </Card.Text>
+                <Card.Footer>
+                    <h5>Sub Total :$273</h5>
+                    <p>Tax :$10.89</p>
+                    <p>Delivery Fee :$5</p>
+                    <h4>Total :$317</h4>
+                </Card.Footer>
+                <Button variant="danger" block>Proceed Order</Button>
+                </Card.Body>
+            </Card>
+            </div>
         </div>
     );
 };

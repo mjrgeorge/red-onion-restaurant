@@ -65,14 +65,34 @@ if(user.password===user.confirmPassword){
 }else{
     alert("Don't Match Password");
 };
-
 e.preventDefault();
+};
+
+const handleSignIn = (e)=> {
+    if(user.email && user.password){
+        firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+        .then(response =>{
+            const newUserInfo = {...user};
+            newUserInfo.success = true;
+            newUserInfo.error = "";
+            setUser(newUserInfo);
+        })
+        .catch(error=>{
+            const errorMessage = error.message;
+            const newUserInfo = {...user};
+            newUserInfo.success = false;
+            newUserInfo.error = errorMessage;
+            setUser(newUserInfo);
+          });
+    }
+
+    e.preventDefault();
 };
 
     return (
         <div>
-            {form===false&&<SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
-            {form===true&&<SignIn/>}
+            {form===false && <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
+            {form===true && <SignIn user={user} handleBlur={handleBlur} handleSignIn={handleSignIn}/>}
         </div>
     );
 };

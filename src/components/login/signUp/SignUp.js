@@ -4,8 +4,8 @@ import { MenuContext } from '../../../App';
 import logo from '../../../images/logo.png';
 
 const SignUp = (props) => {
-    const {handleBlur, handleSingUp, user} = props;
     const [menuItems, setMenuItems, productCount, setProductCount, form, setForm] = useContext(MenuContext);
+    const {handleBlur, handleSingUp, user} = props;
     return (
         <div className="d-flex justify-content-center">
         <Card className="p-4 m-5" style={{width: '400px'}}>

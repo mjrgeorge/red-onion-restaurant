@@ -3,9 +3,10 @@ import Header from '../header/Header';
 import Cover from '../cover/Cover';
 import Menu from '../menu/Menu';
 import {Button, Nav} from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import Facilities from '../facilities/Facilities';
+import Footer from '../footer/Footer';
 
 const Home = () => {
     const {menuCategory} =  useParams();
@@ -14,15 +15,15 @@ const Home = () => {
         <div>
             <Header/>
             <Cover/>
-            <Nav className="justify-content-center" activeKey="/time/lunch">
+            <Nav className="justify-content-center">
                 <Nav.Item>
-                    <Nav.Link className="text-danger" href="/time/breakfast">Breakfast</Nav.Link>
+                    <Link className="text-danger mr-5 h5" href="/time/breakfast">Breakfast</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link className="text-danger" href="/time/lunch">Lunch</Nav.Link>
+                    <Link className="text-danger mr-5 h5" href="/time/lunch">Lunch</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link className="text-danger" href="/time/dinner">Dinner</Nav.Link>
+                    <Link className="text-danger mr-5 h5" href="/time/dinner">Dinner</Link>
                 </Nav.Item>
             </Nav>
             <div className="row m-3">
@@ -31,9 +32,10 @@ const Home = () => {
                 }
             </div>
                 <div className="d-flex justify-content-center mb-3">
-                    <Button variant="light">Checkout You Food</Button>
+                    <Button variant="secondary" size="lg" disabled>Checkout Your Food</Button>{' '}
                 </div>
                 <Facilities/>
+                <Footer/>
         </div>
     );
 };

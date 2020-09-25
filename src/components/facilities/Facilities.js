@@ -14,7 +14,7 @@ const Facilities = () => {
                         <Card.Title>Fast Delivery</Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            additional content.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -27,7 +27,7 @@ const Facilities = () => {
                         <Card.Title>A Good Auto Responder</Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            additional content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -40,7 +40,7 @@ const Facilities = () => {
                         <Card.Title>Fast Delivery</Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            additional content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>

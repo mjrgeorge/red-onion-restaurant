@@ -10,7 +10,7 @@ const Header = () => {
             </div>
             <div className="col-md-2">
                 <div className=" d-flex justify-content-start m-3">
-                    <Button variant="light">Login</Button>
+                    <Button className="rounded-pill" variant="light">Login</Button>
                     <Button className="ml-3 rounded-pill" variant="danger">Sign up</Button>
                 </div>
             </div>

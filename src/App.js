@@ -45,15 +45,15 @@ function App() {
           <Route path="/login">
             <Login/>
           </Route>
-          {/* <Route path="/orderPlace">
+          <Route path="/cart">
             <OrderSubmit/>
-          </Route> */}
+          </Route>
           <Route path="/contact">
             <Contact/>
           </Route>
-          <PrivateRoute path="/cart">
+          {/* <PrivateRoute path="/cart">
             <OrderSubmit/>
-          </PrivateRoute>
+          </PrivateRoute> */}
           <Route exact path="/">
             <Home/>
           </Route>

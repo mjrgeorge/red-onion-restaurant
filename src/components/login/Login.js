@@ -6,6 +6,7 @@ import SignUp from './signUp/SignUp';
 import SignIn from './signIn/SignIn';
 import { MenuContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import NavBar from '../navBar/NavBar';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -112,8 +113,8 @@ const updateProfile = (name)=>{
 };
 
     return (
-        <div>
-            <h1>Name: {user.name} </h1>
+        <div className="m-5">
+            <NavBar/>
             {form===false && <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
             {form===true && <SignIn user={user} handleBlur={handleBlur} handleSignIn={handleSignIn}/>}
         </div>

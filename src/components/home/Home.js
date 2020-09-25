@@ -11,7 +11,7 @@ import NavBar from '../navBar/NavBar';
 
 const Home = () => {
     const {menuCategory} =  useParams();
-    const [menuItems, setMenuItems, productCount, setProductCount] = useContext(MenuContext);
+    const [menuItems, , productCount, ] = useContext(MenuContext);
     
     return (
         <div>

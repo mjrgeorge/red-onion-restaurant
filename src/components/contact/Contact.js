@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Card, Form } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import bike from '../../images/bike.png';
@@ -7,7 +7,7 @@ import LocationMap from '../locationMap/LocationMap';
 import NavBar from '../navBar/NavBar';
 
 const Contact = () => {
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact, rider, setRider] = useContext(MenuContext);
+    const [, , , , , , , , , , contact, , rider, ] = useContext(MenuContext);
     
     let time = new Date();
     time = `${time.getHours()}:${time.getMinutes()}`;

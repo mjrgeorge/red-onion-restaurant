@@ -5,7 +5,7 @@ import { MenuContext } from '../../../App';
 import logo from '../../../images/logo.png';
 
 const SignIn = (props) => {
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm] = useContext(MenuContext);
+    const [, , , , form, setForm] = useContext(MenuContext);
     const {handleBlur, handleSignIn, user} = props;
     return (
         <div className="d-flex justify-content-center">

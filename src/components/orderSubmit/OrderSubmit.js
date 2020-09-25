@@ -7,7 +7,7 @@ import NavBar from '../navBar/NavBar';
 
 const OrderSubmit = () => {
 
-    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact] = useContext(MenuContext);
+    let [, , , , , , loggedInUser, , totalPrice, , , setContact] = useContext(MenuContext);
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => setContact(data);

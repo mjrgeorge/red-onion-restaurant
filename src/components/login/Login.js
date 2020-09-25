@@ -11,7 +11,7 @@ import NavBar from '../navBar/NavBar';
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser] = useContext(MenuContext);
+    const [, , , , form, , , setLoggedInUser] = useContext(MenuContext);
 
 const [user, setUser] = useState({
     isSignedIn: false,

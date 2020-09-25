@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Badge, Button, Image } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import NavBar from '../navBar/NavBar';
 
 const MenuDetails = () => {
-    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact, rider, setRider] = useContext(MenuContext);
+    let [menuItems, , productCount, setProductCount, , , , , , setTotalPrice, , , , setRider] = useContext(MenuContext);
     
     const {menuId} = useParams();
     

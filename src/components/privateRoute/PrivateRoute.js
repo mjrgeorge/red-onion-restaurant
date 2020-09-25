@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { MenuContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser] = useContext(MenuContext);
+    const [, , , , , , loggedInUser, ] = useContext(MenuContext);
     console.log("latest email", loggedInUser.email);
     return (
         <Route

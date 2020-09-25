@@ -17,6 +17,7 @@ const [user, setUser] = useState({
     isSignedIn: false,
     name: '',
     email: '',
+    photo: '',
     password: '',
     confirmPassword: '',
     error: '',
@@ -55,7 +56,7 @@ const handleSingUp = (e) => {
 if(user.password===user.confirmPassword){
     if(user.name && user.email && user.password && user.confirmPassword){
         firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-        .then(response =>{
+        .then(result =>{
             const newUserInfo = {...user};
             newUserInfo.success = true;
             newUserInfo.error = "";
@@ -79,11 +80,11 @@ e.preventDefault();
 const handleSignIn = (e)=> {
     if(user.email && user.password){
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-        .then(response =>{
+        .then(result =>{
             const newUserInfo = {...user};
             newUserInfo.success = true;
             newUserInfo.error = "";
-            newUserInfo.name = response.user.displayName;
+            newUserInfo.name = result.user.displayName;
             setUser(newUserInfo);
             setLoggedInUser(newUserInfo);
             history.replace(from);
@@ -112,11 +113,61 @@ const updateProfile = (name)=>{
     });
 };
 
+//FACEBOOK SIGN IN METHOD:
+    const handleFbSignIn = ()=> {
+        const fbProvider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(fbProvider)
+        .then(function(result) {
+            const user = result.user;
+            const signedInUser = {
+                isSignedIn: false,
+                name: user.displayName,
+                email: user.email,
+                photo: user.photoURL,
+            };
+            setUser(signedInUser);
+            setLoggedInUser(signedInUser);
+            history.replace(from);
+          })
+          .catch(error=>{
+            const errorMessage = error.message;
+            const newUserInfo = {...user};
+            newUserInfo.success = false;
+            newUserInfo.error = errorMessage;
+            setUser(newUserInfo);
+          });
+    };
+    
+//GOOGLE SIGN IN METHOD:
+const handleGoogleSign =()=>{
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(googleProvider)
+    .then(function(result) {
+        const user = result.user;
+        const signedInUser = {
+            isSignedIn: false,
+            name: user.displayName,
+            email: user.email,
+            photo: user.photoURL,
+        };
+        setUser(signedInUser);
+        setLoggedInUser(signedInUser);
+        history.replace(from);
+      })
+      .catch(error=>{
+        const errorMessage = error.message;
+        const newUserInfo = {...user};
+        newUserInfo.success = false;
+        newUserInfo.error = errorMessage;
+        setUser(newUserInfo);
+      });
+};
+
     return (
         <div className="m-5">
             <NavBar/>
-            {form===false && <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp}/>}
-            {form===true && <SignIn user={user} handleBlur={handleBlur} handleSignIn={handleSignIn}/>}
+            {form===false && <SignUp user={user} handleBlur={handleBlur} handleSingUp={handleSingUp} handleFbSignIn={handleFbSignIn} handleGoogleSign={handleGoogleSign}/>}
+            {form===true && <SignIn user={user} handleBlur={handleBlur} handleSignIn={handleSignIn} handleFbSignIn={handleFbSignIn} handleGoogleSign={handleGoogleSign}/>}
         </div>
     );
 };

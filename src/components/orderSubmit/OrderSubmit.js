@@ -39,19 +39,19 @@ const OrderSubmit = () => {
                             <Form.Group>
                                 <h3>Edit Delivery To Details</h3>
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="mb-4">
                                 <Form.Control name="name" defaultValue={loggedInUser.name} ref={register({ required: true })}  type="text" placeholder="Name"/>
                                 {errors.name && <span className="text-danger">Name is required</span>}
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="mb-4">
                                 <Form.Control name="email" defaultValue={loggedInUser.email} ref={register({ required: true })}  type="text" placeholder="Email"/>
                                 {errors.email && <span className="text-danger">Email is required</span>}
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="mb-4">
                                 <Form.Control name="phone" ref={register({ required: true })}  type="text" placeholder="Phone Number"/>
                                 {errors.phone && <span className="text-danger">Phone number is required</span>}
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="mb-4">
                                 <Form.Control name="address" ref={register({ required: true })}  type="text" placeholder="Address"/>
                                 {errors.address && <span className="text-danger">Address is required</span>}
                             </Form.Group>

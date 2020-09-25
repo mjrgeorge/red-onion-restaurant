@@ -6,7 +6,7 @@ import logo from '../../../images/logo.png';
 
 const SignUp = (props) => {
     const [, , , , form, setForm] = useContext(MenuContext);
-    const {handleBlur, handleSingUp, user} = props;
+    const {handleBlur, handleSingUp, handleFbSignIn, handleGoogleSign, user} = props;
     return (
         <div className="d-flex justify-content-center">
         <Card className="p-4 m-5" style={{width: '400px'}}>
@@ -31,6 +31,11 @@ const SignUp = (props) => {
                 <p className="text-danger text-center mt-4">{user.error}</p>
                 <Button onClick={()=>setForm(!form)} block variant="link">Already have an account</Button>
             </Form>
+            <div>
+                <p className="text-dark text-center">Or</p>
+                <Button onClick={handleFbSignIn} variant="success" block>Facebook Sign In</Button>
+                <Button onClick={handleGoogleSign} variant="success" block>Google Sign In</Button>
+            </div>
         </Card>
     </div>
     );

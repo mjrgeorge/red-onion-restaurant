@@ -4,7 +4,6 @@ import { MenuContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const [, , , , , , loggedInUser, ] = useContext(MenuContext);
-    console.log("latest email", loggedInUser.email);
     return (
         <Route
             {...rest}

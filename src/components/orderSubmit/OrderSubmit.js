@@ -7,7 +7,7 @@ import NavBar from '../navBar/NavBar';
 
 const OrderSubmit = () => {
 
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
+    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
@@ -16,6 +16,18 @@ const OrderSubmit = () => {
     const handleContact = ()=> {
         history.push("/contact");
     };
+
+    totalPrice = parseFloat(totalPrice);
+
+    let tax = (totalPrice*.20).toFixed(2);
+    tax = parseFloat(tax);
+    
+    let shippingCost=5;
+    if(totalPrice>=50){
+        shippingCost=3;
+    }
+
+    let payableAmount = Math.round(totalPrice+tax+shippingCost);
 
     return (
         <div className="m-5">
@@ -59,9 +71,9 @@ const OrderSubmit = () => {
                         </Card.Text>
                     <Card.Footer>
                         <h5>Sub Total :${totalPrice}</h5>
-                        <p>Tax :$10.89</p>
-                        <p>Delivery Fee :$5</p>
-                        <h4>Total :$317</h4>
+                        <p>Tax :${tax}</p>
+                        <p>Delivery Fee :${shippingCost}</p>
+                        <h4>Total :${payableAmount}</h4>
                     </Card.Footer>
                     <Button onClick={handleContact} variant="danger" block>Proceed Order</Button>
                     </Card.Body>

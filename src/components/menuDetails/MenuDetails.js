@@ -5,14 +5,15 @@ import { MenuContext } from '../../App';
 import NavBar from '../navBar/NavBar';
 
 const MenuDetails = () => {
-    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
+    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact, rider, setRider] = useContext(MenuContext);
     
     const {menuId} = useParams();
     
     const selectedMenu = menuItems.find(menu => menu.id===`${menuId}`);
-    const {image, category, details, price} = selectedMenu;
+    const {image, category, details, price, biker} = selectedMenu;
     let totalAmount = (productCount*price).toFixed(2);
     setTotalPrice(totalAmount)
+    setRider(biker);
     return(
         <div className="m-5">
             <NavBar/>

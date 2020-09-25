@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { MenuContext } from '../../App';
 import bike from '../../images/bike.png';
 import NavBar from '../navBar/NavBar';
 
 const Contact = () => {
+    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact, rider, setRider] = useContext(MenuContext);
+    
+    let time = new Date();
+    time = `${time.getHours()}:${time.getMinutes()}`;
+
     return (
         <div className="m-5">
             <NavBar/>
@@ -19,20 +25,20 @@ const Contact = () => {
                             <Card.Img className="pb-4 w-25" src={bike} alt="Logo"/>
                             <Card.Header>
                                 <ul>
-                                    <li>Your Location</li>
-                                    <p><small>107 Rd Restaurant 8</small></p>
+                                    <li>{contact.address}</li>
+                                    <p><small>{contact.name}</small></p>
                                     <br/>
                                     <li>Shop Address</li>
-                                    <p><small>Gulshan Piaza Restaurant</small></p>
+                                    <p><small>Husna Rahman Restaurant, Debiganj-5020</small></p>
                                 </ul>
                                 <Card.Body>
                                     <Card.Title>
-                                        <h2>09:30 PM</h2>
-                                        <p><small>Estimated Delivery Time</small></p>
+                                        <h2>{time}</h2>
+                                        <p><small>Estimated Delivery Time Half an Hour</small></p>
                                     </Card.Title>
                                     <Card.Text>
                                         <p><small>Your Rider</small></p>
-                                        <h4>Hamim</h4>
+                                        <h4>{rider}</h4>
                                     </Card.Text>
                                 </Card.Body>
                             </Card.Header>

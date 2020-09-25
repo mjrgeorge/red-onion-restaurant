@@ -5,7 +5,8 @@ const FakeData = [{
         "item": "Baked Chicken",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/W1gKm1pW/breakfast1.png"
+        "image": "https://i.postimg.cc/W1gKm1pW/breakfast1.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "2",
@@ -14,7 +15,8 @@ const FakeData = [{
         "item": "Full Breakfast Fried Egg Toast Brunch",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/vT424QSv/breakfast2.png"
+        "image": "https://i.postimg.cc/vT424QSv/breakfast2.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "3",
@@ -23,7 +25,8 @@ const FakeData = [{
         "item": "Bagel and cream cheese",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/8Cb03X6L/breakfast3.png"
+        "image": "https://i.postimg.cc/8Cb03X6L/breakfast3.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "4",
@@ -32,7 +35,8 @@ const FakeData = [{
         "item": "Eggs Benedict",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/ydYbzhmt/breakfast4.png"
+        "image": "https://i.postimg.cc/ydYbzhmt/breakfast4.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "5",
@@ -41,7 +45,8 @@ const FakeData = [{
         "item": "Breakfast sandwich",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/KzqscKQz/breakfast5.png"
+        "image": "https://i.postimg.cc/KzqscKQz/breakfast5.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "6",
@@ -50,7 +55,8 @@ const FakeData = [{
         "item": "Toast Croissan Fried egg",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/GpRfXnHc/breakfast6.png"
+        "image": "https://i.postimg.cc/GpRfXnHc/breakfast6.png",
+        "biker": "Mr. Jubayer"
     },
     {
         "id": "7",
@@ -59,7 +65,8 @@ const FakeData = [{
         "item": "Healthy Meal Plan",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/tRPpvpg6/lunch1.png"
+        "image": "https://i.postimg.cc/tRPpvpg6/lunch1.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "8",
@@ -68,7 +75,8 @@ const FakeData = [{
         "item": "Fried Chicken Bento",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/DwfhzGPQ/lunch2.png"
+        "image": "https://i.postimg.cc/DwfhzGPQ/lunch2.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "9",
@@ -77,7 +85,8 @@ const FakeData = [{
         "item": "Beef Stick",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/jS8bnjMp/lunch3.png"
+        "image": "https://i.postimg.cc/jS8bnjMp/lunch3.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "10",
@@ -86,7 +95,8 @@ const FakeData = [{
         "item": "Indian Lunch",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/rm4XHNqT/lunch4.png"
+        "image": "https://i.postimg.cc/rm4XHNqT/lunch4.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "11",
@@ -95,7 +105,8 @@ const FakeData = [{
         "item": "Tarragon-Rubbed-Salmon",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/g0Qb4TF4/lunch5.png"
+        "image": "https://i.postimg.cc/g0Qb4TF4/lunch5.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "12",
@@ -104,7 +115,8 @@ const FakeData = [{
         "item": "Honey-Soy-Glazed Salmon with Peppers",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/GpH1F1NH/lunch6.png"
+        "image": "https://i.postimg.cc/GpH1F1NH/lunch6.png",
+        "biker": "Mr. Rahman"
     },
     {
         "id": "13",
@@ -113,7 +125,8 @@ const FakeData = [{
         "item": "Backed Chiken",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/Y2NTm99d/dinner1.png"
+        "image": "https://i.postimg.cc/Y2NTm99d/dinner1.png",
+        "biker": "Mr. George"
     },
     {
         "id": "14",
@@ -122,7 +135,8 @@ const FakeData = [{
         "item": "Pork Tenderloin With Quinoa Pilaf",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/2SttfLcS/dinner2.png"
+        "image": "https://i.postimg.cc/2SttfLcS/dinner2.png",
+        "biker": "Mr. George"
     },
     {
         "id": "15",
@@ -131,7 +145,8 @@ const FakeData = [{
         "item": "Garlic Butter Baked Salmon",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/vZTKjtvK/dinner3.png"
+        "image": "https://i.postimg.cc/vZTKjtvK/dinner3.png",
+        "biker": "Mr. George"
     },
     {
         "id": "16",
@@ -140,7 +155,8 @@ const FakeData = [{
         "item": "Lemony Salmon Piccata",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/NMqPKqwh/dinner4.png"
+        "image": "https://i.postimg.cc/NMqPKqwh/dinner4.png",
+        "biker": "Mr. George"
     },
     {
         "id": "17",
@@ -149,7 +165,8 @@ const FakeData = [{
         "item": "Salmon with Grapefruit and Lentil Salad",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/JhB277vc/dinner5.png"
+        "image": "https://i.postimg.cc/JhB277vc/dinner5.png",
+        "biker": "Mr. George"
     },
     {
         "id": "18",
@@ -158,7 +175,8 @@ const FakeData = [{
         "item": "French fries with cheese",
         "details": "Nulla dapibus molestie mi, vitae ultrices ipsum. Cras ultrices tincidunt lectus in sollicitudin. Nullam consequat bibendum commodo. Aliquam eu diam maximus, blandit nisl vitae, cursus libero. Donec fermentum a augue ut lobortis. Donec consequat elit id lorem laoreet, in imperdiet arcu luctus. Integer enim ligula.",
         "description": "How we dream about our future",
-        "image": "https://i.postimg.cc/RVX8XDwf/dinner6.png"
+        "image": "https://i.postimg.cc/RVX8XDwf/dinner6.png",
+        "biker": "Mr. George"
     }
 ];
 

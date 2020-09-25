@@ -7,10 +7,10 @@ import NavBar from '../navBar/NavBar';
 
 const OrderSubmit = () => {
 
-    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
+    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact] = useContext(MenuContext);
 
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => setContact(data);
 
     const history = useHistory();
     const handleContact = ()=> {
@@ -62,12 +62,12 @@ const OrderSubmit = () => {
                 <div className="col-md-6">
                 <Card className="p-4 m-5" style={{width: '400px'}}>
                     <Card.Header>
-                            <h5>From Debiganj Husna Rahman Restaurant</h5>
+                            <h5>From Husna Rahman Restaurant</h5>
                     </Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <p><small>Arriving in 20-30 Min</small></p>
-                            <p><small>107 Rd No 8</small></p>
+                            <p><small>Arriving in 20-30 Minutes</small></p>
+                            <p><small>Debiganj-5020</small></p>
                         </Card.Text>
                     <Card.Footer>
                         <h5>Sub Total :${totalPrice}</h5>

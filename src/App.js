@@ -19,7 +19,7 @@ export const MenuContext = createContext();
 function App() {
 
   const [menuItems, setMenuItems] = useState(FakeData);
-  const [productCount, setProductCount] = useState(1);
+  const [productCount, setProductCount] = useState(0);
   const [form, setForm] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);

@@ -19,7 +19,7 @@ const OrderSubmit = () => {
 
     totalPrice = parseFloat(totalPrice);
 
-    let tax = (totalPrice*.20).toFixed(2);
+    let tax = (totalPrice*.10).toFixed(2);
     tax = parseFloat(tax);
     
     let shippingCost=5;

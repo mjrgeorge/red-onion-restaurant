@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 import { MenuContext } from '../../App';
 import bike from '../../images/bike.png';
+import LocationMap from '../locationMap/LocationMap';
 import NavBar from '../navBar/NavBar';
 
 const Contact = () => {
@@ -16,7 +17,7 @@ const Contact = () => {
             <div className="row">
                 <div className="col-md-6 d-flex justify-content-center">
                     <Card className="p-4 m-5" style={{width: '400px'}}>
-                        
+                        <LocationMap/>
                     </Card>
                 </div>
                 <div className="col-md-6">

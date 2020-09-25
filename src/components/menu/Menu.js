@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image} from 'react-bootstrap';
 import {useHistory } from 'react-router-dom';
+import './Menu.css';
 
 const Menu = (props) => {
     const {id, item, description, price, image} = props.menus;
@@ -11,7 +12,7 @@ const Menu = (props) => {
     }
     return (
         <div onClick={handleClick} className="col-md-4 text-center">
-            <div style={{border: '1px solid gray', boxShadow: '1px 1px 10px black', cursor: 'pointer'}} className="m-3 p-3">
+            <div className="cardStyle m-3 p-3">
                 <Image src={image} fluid />
                 <div>
                     <h4>{item}</h4>

@@ -4,15 +4,22 @@ import { Link } from 'react-router-dom';
 import Image1 from '../../images/img1.png';
 import Image2 from '../../images/img2.png';
 import Image3 from '../../images/img3.png';
+import Icon1 from '../../images/icon1.png';
+import Icon2 from '../../images/icon2.png';
+import Icon3 from '../../images/icon3.png';
 
 const Facilities = () => {
     return (
         <div>
+            <div className="ml-5 text-dark w-50">
+                <h2>Why you choose us</h2>
+                <p>Barton waited twenty always repair in within we do. An delight offending curiosity my is dash woods at. Boy prosperous increasing surrounded.</p>
+            </div>
             <CardDeck className="m-4">
                 <Card>
                     <Card.Img variant="top" src={Image1}/>
                     <Card.Body>
-                        <Card.Title>Fast Delivery</Card.Title>
+                        <Card.Title><img src={Icon1} alt="Icon"/> Fast Delivery </Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
                             additional content.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.
@@ -26,7 +33,7 @@ const Facilities = () => {
                 <Card>
                     <Card.Img variant="top" src={Image2}/>
                     <Card.Body>
-                        <Card.Title>A Good Auto Responder</Card.Title>
+                        <Card.Title><img src={Icon1} alt="Icon"/> A Good Auto Responder </Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
                             additional content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.
@@ -40,7 +47,7 @@ const Facilities = () => {
                 <Card>
                     <Card.Img variant="top" src={Image3}/>
                     <Card.Body>
-                        <Card.Title>Fast Delivery</Card.Title>
+                    <Card.Title><img src={Icon1} alt="Icon"/> Home Delivery </Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
                             additional content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. This content is a little bit longer.

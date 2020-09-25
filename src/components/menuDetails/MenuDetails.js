@@ -10,8 +10,6 @@ const MenuDetails = () => {
     const selectedMenu = menuItems.find(menu => menu.id===`${menuId}`);
     const {image, category, details, price} = selectedMenu;
     const totalPrice = (productCount*price).toFixed(2);
-
-
     return(
         <div className="m-5">
             <NavBar/>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Badge, Button, Image } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 
 const MenuDetails = () => {
@@ -9,11 +9,8 @@ const MenuDetails = () => {
     const selectedMenu = menuItems.find(menu => menu.id===`${menuId}`);
     const {image, category, details, price} = selectedMenu;
     const totalPrice = (productCount*price).toFixed(2);
-    const history = useHistory();
-    const handleProceed = () => {
-        const url = `/orderPlace`;
-        history.push(url);
-    }
+
+
     return(
         <div className="row">
             <div className="col-md-6 p-5 text-center">
@@ -27,7 +24,9 @@ const MenuDetails = () => {
                         <Button onClick={()=>setProductCount(productCount+1)} variant="light rounded-pill">+</Button>
                     </Badge>
                 </div>
-                <Button onClick={handleProceed} variant="danger rounded-pill mt-3 pl-5 pr-5">Add</Button>
+                <Link to="/cart">
+                    <Button variant="danger rounded-pill mt-3 pl-5 pr-5">Add</Button>
+                </Link>
             </div>
             <div className="col-md-6 p-5 text-center">
             <Image className="p-5 mb-5 mr-5" src={image} fluid />

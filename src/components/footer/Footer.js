@@ -7,7 +7,9 @@ const Footer = () => {
         <div>
             <div class="d-flex bg-dark">
                 <div class="m-5 flex-grow-1">
-                <img className="w-25" src={logo} alt="logo"/>
+                <Link to="/home">
+                    <img className="w-25" src={logo} alt="logo"/>
+                </Link>
                 </div>
                 <div class="m-5 pr-5">
                     <Link class="text-white d-block text-decoration-none">Get help</Link>

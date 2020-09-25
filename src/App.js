@@ -51,7 +51,7 @@ function App() {
           <Route path="/contact">
             <Contact/>
           </Route>
-          <PrivateRoute path="/orderPlace">
+          <PrivateRoute path="/cart">
             <OrderSubmit/>
           </PrivateRoute>
           <Route exact path="/">

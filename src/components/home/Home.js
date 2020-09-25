@@ -3,7 +3,7 @@ import Header from '../header/Header';
 import Cover from '../cover/Cover';
 import Menu from '../menu/Menu';
 import {Button} from 'react-bootstrap';
-import {useParams } from 'react-router-dom';
+import {Link, useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import Facilities from '../facilities/Facilities';
 import Footer from '../footer/Footer';
@@ -11,7 +11,8 @@ import NavBar from '../navBar/NavBar';
 
 const Home = () => {
     const {menuCategory} =  useParams();
-    const [menuItems, setMenuItems] = useContext(MenuContext);
+    const [menuItems, setMenuItems, productCount, setProductCount] = useContext(MenuContext);
+    
     return (
         <div>
             <Header/>
@@ -23,7 +24,12 @@ const Home = () => {
                 }
             </div>
                 <div className="d-flex justify-content-center mb-3">
-                    <Button variant="secondary" size="lg" disabled>Checkout Your Food</Button>{' '}
+                    <Link to="/cart">
+                        {
+                        productCount>0 ? <Button variant="secondary" size="lg" enabled >Checkout Your Food</Button>
+                        :<Button variant="secondary" size="lg" disabled >Checkout Your Food</Button>
+                        }
+                    </Link>
                 </div>
                 <Facilities/>
                 <Footer/>

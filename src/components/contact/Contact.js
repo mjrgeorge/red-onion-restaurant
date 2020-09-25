@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import bike from '../../images/bike.png';
 import LocationMap from '../locationMap/LocationMap';
@@ -23,7 +24,9 @@ const Contact = () => {
                 <div className="col-md-6">
                     <div className="d-flex justify-content-center">
                         <Card className="p-4 m-5" style={{width: '400px'}}>
-                            <Card.Img className="pb-4 w-25" src={bike} alt="Logo"/>
+                            <Link to="/cart">
+                                <Card.Img className="pb-4 w-25" src={bike} alt="Logo"/>
+                            </Link>
                             <Card.Header>
                                 <ul>
                                     <li>{contact.address}</li>

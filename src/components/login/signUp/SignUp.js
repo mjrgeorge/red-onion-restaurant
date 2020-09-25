@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { MenuContext } from '../../../App';
 import logo from '../../../images/logo.png';
 
@@ -9,7 +10,9 @@ const SignUp = (props) => {
     return (
         <div className="d-flex justify-content-center">
         <Card className="p-4 m-5" style={{width: '400px'}}>
-            <Card.Img className="pb-4" src={logo} alt="Logo"/>
+            <Link to="/home">
+                <Card.Img className="pb-4" src={logo} alt="Logo"/>
+            </Link>
             <Form onSubmit={handleSingUp}>
                 <Form.Group>
                     <Form.Control onBlur={handleBlur} type="text" name="name" placeholder="Name" required/>

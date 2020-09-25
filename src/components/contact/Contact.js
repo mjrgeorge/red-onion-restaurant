@@ -46,7 +46,9 @@ const Contact = () => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card.Header>
-                            <Button variant="danger" block type="submit">Contact</Button>
+                            <a className="text-decoration-none" href="tel:+8801841503316">
+                                <Button variant="danger" block type="submit">Contact</Button>
+                            </a>
                         </Card>
                     </div>
                 </div>

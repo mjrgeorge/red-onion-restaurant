@@ -1,15 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Badge, Button, Image } from 'react-bootstrap';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { MenuContext } from '../../App';
 import NavBar from '../navBar/NavBar';
 
 const MenuDetails = () => {
+    let [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
+    
     const {menuId} = useParams();
-    const [menuItems, setMenuItems, productCount, setProductCount] = useContext(MenuContext);
+    
     const selectedMenu = menuItems.find(menu => menu.id===`${menuId}`);
     const {image, category, details, price} = selectedMenu;
-    const totalPrice = (productCount*price).toFixed(2);
+    let totalAmount = (productCount*price).toFixed(2);
+    setTotalPrice(totalAmount)
     return(
         <div className="m-5">
             <NavBar/>
@@ -18,10 +21,10 @@ const MenuDetails = () => {
                     <div>
                         <h1 className="display-1 text-uppercase pl-5 pt-5"> {category} </h1>
                         <p className="font-weight-light text-justify pl-5"> {details} </p>
-                        <span className="h4"> ${totalPrice} </span>
+                        <span className="h4"> ${totalAmount>=0 ? totalAmount : totalAmount=0} </span>
                         <Badge pill variant="light" style={{border: '1px solid gray'}}>
                             <Button onClick={()=>setProductCount(productCount-1)} variant="light rounded-pill">-</Button>
-                                <span className="h4"> {productCount} </span>
+                                <span className="h4"> {productCount>=1 ? productCount : productCount=0} </span>
                             <Button onClick={()=>setProductCount(productCount+1)} variant="light rounded-pill">+</Button>
                         </Badge>
                     </div>

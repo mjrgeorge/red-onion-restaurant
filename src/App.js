@@ -22,9 +22,11 @@ function App() {
   const [productCount, setProductCount] = useState(1);
   const [form, setForm] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+
 
   return (
-    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser]}>
+    <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice]}>
       <Router>
         <Switch>
           <Route path="/home">

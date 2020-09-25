@@ -7,7 +7,7 @@ import NavBar from '../navBar/NavBar';
 
 const OrderSubmit = () => {
 
-    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser] = useContext(MenuContext);
+    const [menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice] = useContext(MenuContext);
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
@@ -16,6 +16,7 @@ const OrderSubmit = () => {
     const handleContact = ()=> {
         history.push("/contact");
     };
+
     return (
         <div className="m-5">
             <NavBar/>
@@ -57,7 +58,7 @@ const OrderSubmit = () => {
                             <p><small>107 Rd No 8</small></p>
                         </Card.Text>
                     <Card.Footer>
-                        <h5>Sub Total :$273</h5>
+                        <h5>Sub Total :${totalPrice}</h5>
                         <p>Tax :$10.89</p>
                         <p>Delivery Fee :$5</p>
                         <h4>Total :$317</h4>

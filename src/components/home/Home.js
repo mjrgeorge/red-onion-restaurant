@@ -17,13 +17,13 @@ const Home = () => {
             <Cover/>
             <Nav className="justify-content-center">
                 <Nav.Item>
-                    <Link className="text-danger mr-5 h5" href="/time/breakfast">Breakfast</Link>
+                    <Link className="text-danger mr-5 h5" to="/time/breakfast">Breakfast</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link className="text-danger mr-5 h5" href="/time/lunch">Lunch</Link>
+                    <Link className="text-danger mr-5 h5" to="/time/lunch">Lunch</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link className="text-danger mr-5 h5" href="/time/dinner">Dinner</Link>
+                    <Link className="text-danger mr-5 h5" to="/time/dinner">Dinner</Link>
                 </Nav.Item>
             </Nav>
             <div className="row m-3">

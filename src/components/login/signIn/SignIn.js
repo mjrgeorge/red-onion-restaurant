@@ -10,9 +10,7 @@ const SignIn = (props) => {
     return (
         <div className="d-flex justify-content-center">
             <Card className="p-4 m-5" style={{width: '400px'}}>
-            <Link to="/home">
                 <Card.Img className="pb-4" src={logo} alt="Logo"/>
-            </Link>
                 <Form onSubmit={handleSignIn}>
                     <Form.Group>
                         <Form.Control onBlur={handleBlur} type="email" name="email" placeholder="Email" required/>

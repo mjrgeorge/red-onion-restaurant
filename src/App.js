@@ -25,7 +25,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [contact, setContact] = useState('');
   const [rider, setRider] = useState('');
-
+console.log(loggedInUser);
   return (
     <MenuContext.Provider value={[menuItems, setMenuItems, productCount, setProductCount, form, setForm, loggedInUser, setLoggedInUser, totalPrice, setTotalPrice, contact, setContact, rider, setRider]}>
       <Router>

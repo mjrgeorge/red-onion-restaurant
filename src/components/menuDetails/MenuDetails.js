@@ -20,7 +20,7 @@ const MenuDetails = () => {
             <div className="row">
                 <div className="col-md-6 p-5 text-center">
                     <div>
-                        <h1 className="display-1 text-uppercase pl-5 pt-5"> {category} </h1>
+                        <h1 className="display-3 text-uppercase pl-5 pt-5"> {category} </h1>
                         <p className="font-weight-light text-justify pl-5"> {details} </p>
                         <span className="h4"> ${totalAmount>=0 ? totalAmount : totalAmount=0} </span>
                         <Badge pill variant="light" style={{border: '1px solid gray'}}>
@@ -36,8 +36,8 @@ const MenuDetails = () => {
                         </Button>
                     </Link>
                 </div>
-                <div className="col-md-6 p-5 text-center">
-                <Image className="p-5 mb-5 mr-5" src={image} fluid />
+                <div className="col-md-6 text-center">
+                    <Image className="p-5 mb-5 mr-5" src={image} fluid />
                 </div>
             </div>
         </div>
